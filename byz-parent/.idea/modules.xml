@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../bzy-common/hawcore-common.iml" filepath="$PROJECT_DIR$/../bzy-common/hawcore-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bzy-core/hawcore-core.iml" filepath="$PROJECT_DIR$/../bzy-core/hawcore-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bzy-log/hawcore-log.iml" filepath="$PROJECT_DIR$/../bzy-log/hawcore-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hawcore-parent.iml" filepath="$PROJECT_DIR$/hawcore-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bzy-thread/hawcore-thread.iml" filepath="$PROJECT_DIR$/../bzy-thread/hawcore-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bzy-util/hawcore-util.iml" filepath="$PROJECT_DIR$/../bzy-util/hawcore-util.iml" />
+    </modules>
+  </component>
+</project>
