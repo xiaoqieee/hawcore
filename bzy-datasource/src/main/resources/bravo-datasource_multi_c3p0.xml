@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="dataSourceFactory" class="com.banzhiyan.datasource.multi.v1.routing.DataSourceFactory" />
+	<bean id="commonDataSourceConfig" factory-bean="dataSourceFactory" factory-method="createC3p0DataSource" abstract="true" destroy-method="close" />
+	<import resource="classpath:jdbc_multi_dataSource.xml" />
+	<bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.C3P0NativeJdbcExtractor" lazy-init="true" />
+
+</beans>

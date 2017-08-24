@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="springRedisSentinelConfiguration" class="com.banzhiyan.redis.sentinel.RedisSentinelConfigurationFactory">
+		<constructor-arg value="${sentinel.masterName}" />
+		<constructor-arg>
+			<bean class="com.banzhiyan.redis.sentinel.SentinelsMetaSource">
+				<constructor-arg value="${sentinel.address}" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="springLettuceConnectionFactory" class="com.banzhiyan.redis.lettuce.CustomLettuceConnectionFactory">
+		<constructor-arg>
+			<bean class="com.banzhiyan.redis.lettuce.CustomLettucePool">
+				<constructor-arg ref="springRedisSentinelConfiguration" />
+			</bean>
+		</constructor-arg>
+		<constructor-arg value="${redis.database}" />
+	</bean>
+
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" p:connection-factory-ref="springLettuceConnectionFactory" />
+
+	<bean id="stringRedisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate" p:connection-factory-ref="springLettuceConnectionFactory" />
+
+	<bean id="objectRedisTemplate" class="com.banzhiyan.redis.spring.ObjectRedisTemplate" p:connection-factory-ref="springLettuceConnectionFactory" />
+
+</beans>

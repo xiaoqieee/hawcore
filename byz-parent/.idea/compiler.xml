@@ -12,12 +12,17 @@
       <entry name="!?*.clj" />
     </wildcardResourcePatterns>
     <bytecodeTargetLevel>
+      <module name="hawcore-cache" target="1.7" />
       <module name="hawcore-common" target="1.7" />
       <module name="hawcore-core" target="1.7" />
+      <module name="hawcore-datasource" target="1.7" />
       <module name="hawcore-log" target="1.7" />
       <module name="hawcore-logger" target="1.7" />
       <module name="hawcore-parent" target="1.7" />
+      <module name="hawcore-redis" target="1.7" />
+      <module name="hawcore-security" target="1.7" />
       <module name="hawcore-thread" target="1.7" />
+      <module name="hawcore-tolerance" target="1.7" />
       <module name="hawcore-util" target="1.7" />
     </bytecodeTargetLevel>
   </component>

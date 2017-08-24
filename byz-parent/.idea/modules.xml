@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../bzy-cache/hawcore-cache.iml" filepath="$PROJECT_DIR$/../bzy-cache/hawcore-cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bzy-common/hawcore-common.iml" filepath="$PROJECT_DIR$/../bzy-common/hawcore-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bzy-core/hawcore-core.iml" filepath="$PROJECT_DIR$/../bzy-core/hawcore-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bzy-datasource/hawcore-datasource.iml" filepath="$PROJECT_DIR$/../bzy-datasource/hawcore-datasource.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bzy-log/hawcore-log.iml" filepath="$PROJECT_DIR$/../bzy-log/hawcore-log.iml" />
       <module fileurl="file://$PROJECT_DIR$/hawcore-parent.iml" filepath="$PROJECT_DIR$/hawcore-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bzy-redis/hawcore-redis.iml" filepath="$PROJECT_DIR$/../bzy-redis/hawcore-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bzy-security/hawcore-security.iml" filepath="$PROJECT_DIR$/../bzy-security/hawcore-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bzy-thread/hawcore-thread.iml" filepath="$PROJECT_DIR$/../bzy-thread/hawcore-thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bzy-tolerance/hawcore-tolerance.iml" filepath="$PROJECT_DIR$/../bzy-tolerance/hawcore-tolerance.iml" />
       <module fileurl="file://$PROJECT_DIR$/../bzy-util/hawcore-util.iml" filepath="$PROJECT_DIR$/../bzy-util/hawcore-util.iml" />
     </modules>
   </component>

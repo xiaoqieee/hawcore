@@ -3,6 +3,7 @@ package com.banzhiyan.util.http;
 import com.banzhiyan.logging.Logger;
 import com.banzhiyan.logging.LoggerFactory;
 import com.banzhiyan.util.Charsets;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.config.RequestConfig;
@@ -27,8 +28,11 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.ssl.SSLContexts;
 import org.apache.http.ssl.TrustStrategy;
 
-import javax.net.ssl.SSLContext;
-import java.net.*;
+import java.net.CookieHandler;
+import java.net.CookieManager;
+import java.net.CookiePolicy;
+import java.net.CookieStore;
+import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
@@ -38,6 +42,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import javax.net.ssl.SSLContext;
 
 /**
  * Created by xn025665 on 2017/8/23.

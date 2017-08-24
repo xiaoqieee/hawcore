@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dataSourceFactory" class="com.banzhiyan.datasource.DataSourceFactory">
+		<constructor-arg name="driverClass" value="${jdbc.driverclass}" />
+		<constructor-arg name="jdbcUrl" value="${jdbc.url}" />
+		<constructor-arg name="username" value="${jdbc.username}" />
+		<constructor-arg name="password" value="${jdbc.password}" />
+		<constructor-arg name="maxPoolSize" value="${jdbc.pool.size.max}" />
+	</bean>
+
+	<bean id="dataSource" factory-bean="dataSourceFactory" factory-method="createHikariCPDataSource" />
+
+	<bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.SimpleNativeJdbcExtractor" lazy-init="true" />
+
+</beans>

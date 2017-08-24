@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="messageSource" class="com.banzhiyan.core.support.PrefixResourceBundleMessageSource">
+		<property name="locationPatterns">
+			<array>
+				<value>classpath*:META-INF/messages*.properties</value>
+			</array>
+		</property>
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="useCodeAsDefaultMessage" value="false" />
+		<property name="cacheSeconds" value="1800" />
+	</bean>
+</beans>

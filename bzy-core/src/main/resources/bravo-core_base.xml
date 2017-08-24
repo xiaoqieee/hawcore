@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/task
+			http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<bean class="com.banzhiyan.core.config.LocationsMetaSource" />
+		</property>
+		<property name="fileEncoding" value="UTF-8" />
+		<property name="order" value="-128" />
+	</bean>
+
+	<bean class="com.banzhiyan.core.util.ApplicationContextHolder" />
+	<task:annotation-driven executor="taskExecutor" scheduler="taskScheduler" proxy-target-class="true" />
+	<task:executor id="taskExecutor" pool-size="#{T(com.banzhiyan.core.config.ProcessorHelper).oneToFourfold()}" keep-alive="30" queue-capacity="3000" rejection-policy="CALLER_RUNS" />
+	<task:scheduler id="taskScheduler" pool-size="#{T(com.banzhiyan.core.config.ProcessorHelper).number()}" />
+
+</beans>

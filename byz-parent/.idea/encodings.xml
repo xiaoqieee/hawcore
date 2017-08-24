@@ -2,10 +2,15 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bzy-cache" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bzy-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bzy-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bzy-datasource" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bzy-log" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bzy-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bzy-security" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bzy-thread" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../bzy-tolerance" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../bzy-util" charset="UTF-8" />
   </component>
 </project>
